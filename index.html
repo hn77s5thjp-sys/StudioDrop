@@ -3,42 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StudioDrop</title>
+<title>StudioDrop — Studio product photos. One drag.</title>
+<meta name="description" content="Batch background removal for online sellers. Drop in a folder of phone snaps, get back studio-quality product photos. One-time purchase, 100% on-device, works offline.">
+<meta property="og:title" content="StudioDrop — Studio product photos. One drag.">
+<meta property="og:description" content="Batch background removal for online sellers. One-time purchase. No subscription. 100% on-device.">
+<meta name="theme-color" content="#1e1e20">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #1e1e20; color: rgba(255,255,255,0.88);
-    font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
-    line-height: 1.65; padding: 40px 20px 80px; }
-  .wrap { max-width: 640px; margin: 0 auto; }
-  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
-  .brand-dot { width: 34px; height: 34px; border-radius: 9px;
-    background: linear-gradient(135deg, #7fb5b0, #1c2740); }
-  .brand-name { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
-  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
-  .updated { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 30px; }
-  h2 { font-size: 16px; font-weight: 600; margin: 28px 0 8px; color: #8fb8f6; }
-  p, li { font-size: 15px; color: rgba(255,255,255,0.72); margin-bottom: 12px; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 8px; }
-  a { color: #8fb8f6; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .card { background: #2a2a2e; border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px; padding: 18px 20px; margin: 20px 0; }
-  .footer { margin-top: 48px; font-size: 12px; color: rgba(255,255,255,0.3); }
-  .footer a { color: rgba(255,255,255,0.45); }
+  :root {
+    --bg:#1e1e20; --card:#2a2a2e; --card2:#323237;
+    --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+    --t1:rgba(255,255,255,.92); --t2:rgba(255,255,255,.6); --t3:rgba(255,255,255,.32);
+    --blue:#3b82f6; --bluel:#8fb8f6; --green:#34d399;
+  }
+  html { scroll-behavior: smooth; }
+  body { background:var(--bg); color:var(--t1);
+    font-family:-apple-system,'Segoe UI',system-ui,sans-serif; line-height:1.6;
+    -webkit-font-smoothing:antialiased; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--bluel); text-decoration: none; }
+
+  /* Nav */
+  nav { padding: 20px 0; }
+  nav .wrap { display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:16px; color:var(--t1); }
+  .dot { width:30px; height:30px; border-radius:8px;
+    background:linear-gradient(135deg,#7fb5b0,#1c2740); }
+  .navlinks { display:flex; gap:22px; font-size:14px; }
+  .navlinks a { color:var(--t2); } .navlinks a:hover { color:var(--t1); }
+
+  /* Hero */
+  .hero { padding: 64px 0 40px; text-align:center; }
+  h1 { font-size: clamp(34px, 6vw, 56px); font-weight:800; letter-spacing:-.03em;
+    line-height:1.1; margin-bottom:16px; }
+  h1 .grad { background:linear-gradient(90deg,#8fb8f6,#7fd8c4);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { font-size: clamp(16px,2.4vw,19px); color:var(--t2); max-width:620px; margin:0 auto 28px; }
+  .cta { display:inline-block; background:var(--blue); color:#fff; font-weight:600;
+    font-size:16px; padding:14px 30px; border-radius:12px; transition:opacity .15s; }
+  .cta:hover { opacity:.85; }
+  .cta-note { font-size:13px; color:var(--t3); margin-top:12px; }
+
+  /* App mock */
+  .mock { max-width:560px; margin:52px auto 0; background:var(--card);
+    border:1px solid var(--line2); border-radius:16px; overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.5); text-align:left; }
+  .mock-bar { height:34px; display:flex; align-items:center; gap:7px; padding:0 14px;
+    border-bottom:1px solid var(--line); }
+  .tl { width:11px; height:11px; border-radius:50%; }
+  .mock-title { flex:1; text-align:center; font-size:12px; color:var(--t3); margin-right:36px; }
+  .mock-body { padding:14px 16px 16px; display:flex; flex-direction:column; gap:10px; }
+  .mock-drop { border:1.5px dashed var(--line2); border-radius:12px; padding:14px;
+    text-align:center; font-size:13px; color:var(--t2); font-weight:600; }
+  .mrow { display:flex; align-items:center; gap:10px; background:var(--card2);
+    border:1px solid var(--line); border-radius:9px; padding:8px 11px; }
+  .mthumb { width:28px; height:28px; border-radius:6px; background:#3c3c40; }
+  .mname { flex:1; font-size:12px; color:var(--t1); }
+  .pill { font-size:10px; font-weight:600; padding:3px 9px; border-radius:20px; }
+  .pill.done { background:rgba(52,211,153,.14); color:var(--green); }
+  .pill.act { background:rgba(59,130,246,.16); color:var(--bluel); }
+  .mchips { display:flex; gap:7px; align-items:center; font-size:10px; color:var(--t3);
+    letter-spacing:.06em; font-weight:700; }
+  .chip { width:20px; height:20px; border-radius:50%; border:1.5px solid var(--line2); }
+  .mgo { align-self:flex-end; background:var(--blue); color:#fff; font-size:13px;
+    font-weight:700; padding:9px 22px; border-radius:9px; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .kicker { text-align:center; font-size:12px; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--bluel); margin-bottom:10px; }
+  h2 { text-align:center; font-size:clamp(24px,4vw,34px); font-weight:800;
+    letter-spacing:-.02em; margin-bottom:40px; }
+
+  /* Features grid */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+  .fcard { background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:22px; }
+  .fcard h3 { font-size:16px; font-weight:700; margin:12px 0 6px; }
+  .fcard p { font-size:14px; color:var(--t2); }
+  .ficon { width:38px; height:38px; border-radius:10px; background:rgba(59,130,246,.14);
+    display:flex; align-items:center; justify-content:center; color:var(--bluel); }
+
+  /* Steps */
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; }
+  .stepnum { width:30px; height:30px; border-radius:50%; background:var(--blue); color:#fff;
+    font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center;
+    margin-bottom:12px; }
+  .step h3 { font-size:16px; margin-bottom:6px; } .step p { font-size:14px; color:var(--t2); }
+
+  /* Story */
+  .story { background:var(--card); border:1px solid var(--line2); border-radius:18px;
+    padding:36px; max-width:760px; margin:0 auto; }
+  .story p { font-size:16px; color:var(--t2); margin-bottom:14px; }
+  .story strong { color:var(--t1); }
+
+  /* Screenshots slots (auto-hide until you upload files) */
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+  .shots img { width:100%; border-radius:14px; border:1px solid var(--line2); display:block; }
+
+  /* FAQ */
+  .faq { max-width:720px; margin:0 auto; }
+  .faq details { background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:16px 20px; margin-bottom:10px; }
+  .faq summary { font-size:15px; font-weight:600; cursor:pointer; color:var(--t1); }
+  .faq p { font-size:14px; color:var(--t2); margin-top:10px; }
+
+  footer { border-top:1px solid var(--line); padding:34px 0 60px; text-align:center;
+    font-size:13px; color:var(--t3); }
+  footer a { color:var(--t2); margin:0 10px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="brand"><div class="brand-dot"></div><span class="brand-name">StudioDrop</span></div>
-  <h1>Studio product photos. One drag.</h1>
-  <p>Batch background removal for online sellers — on your Mac, no subscription,
-  yours forever.</p>
-  <div class="card">
-    <p style="margin:0"><a href="support.html">Support</a> &nbsp;·&nbsp;
-    <a href="privacy.html">Privacy Policy</a></p>
+
+<nav><div class="wrap">
+  <div class="brand"><div class="dot"></div>StudioDrop</div>
+  <div class="navlinks">
+    <a href="#features">Features</a><a href="#how">How it works</a>
+    <a href="support.html">Support</a>
   </div>
-  <div class="footer">© 2026 StudioDrop</div>
-</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Studio product photos.<br><span class="grad">One drag.</span></h1>
+  <p class="sub">Batch background removal for online sellers — drop in a folder of
+  phone snaps, get back bright, shadow-lit, listing-ready images.
+  On your Mac. No subscription. Yours forever.</p>
+  <a class="cta" href="APP_STORE_LINK_HERE">Download on the Mac App Store</a>
+  <div class="cta-note">One-time purchase &nbsp;·&nbsp; Unlimited photos &nbsp;·&nbsp; macOS 12+ (Apple Silicon)</div>
+
+  <!-- Built-in app mock: the page looks complete before any screenshots -->
+  <div class="mock">
+    <div class="mock-bar">
+      <span class="tl" style="background:#ff5f57"></span>
+      <span class="tl" style="background:#febc2e"></span>
+      <span class="tl" style="background:#28c840"></span>
+      <span class="mock-title">StudioDrop</span>
+    </div>
+    <div class="mock-body">
+      <div class="mock-drop">Drop your photos here</div>
+      <div class="mrow"><div class="mthumb"></div><div class="mname">IMG_0912.HEIC</div><span class="pill done">Done ✓</span></div>
+      <div class="mrow"><div class="mthumb"></div><div class="mname">IMG_0913.HEIC</div><span class="pill done">Done ✓</span></div>
+      <div class="mrow"><div class="mthumb"></div><div class="mname">IMG_0914.HEIC</div><span class="pill act">Processing…</span></div>
+      <div class="mchips">BACKGROUND
+        <span class="chip" style="background:#fff"></span>
+        <span class="chip" style="background:repeating-conic-gradient(#cfcfcf 0 25%,#fff 0 50%) 0 0/8px 8px"></span>
+        <span class="chip" style="background:#f6dfe4"></span>
+        <span class="chip" style="background:#dfe8df"></span>
+        <span class="chip" style="background:#1c2740"></span>
+        <span class="chip" style="background:conic-gradient(#f66,#fc6,#6f6,#6cf,#66f,#f6f,#f66)"></span>
+      </div>
+      <div class="mgo">Process</div>
+    </div>
+  </div>
+</div></header>
+
+<section id="features"><div class="wrap">
+  <div class="kicker">Everything a seller needs</div>
+  <h2>Built for listing days</h2>
+  <div class="grid">
+    <div class="fcard"><div class="ficon">▣</div><h3>Batch 500+ photos</h3>
+      <p>Drag an entire folder. The AI engine loads once and stays warm, so big batches fly.</p></div>
+    <div class="fcard"><div class="ficon">◐</div><h3>Any backdrop</h3>
+      <p>Pure white, transparent PNG, curated palette, a full colour wheel — or your own image as a branded background.</p></div>
+    <div class="fcard"><div class="ficon">⬒</div><h3>Every shape</h3>
+      <p>Square, portrait, tall pin, vertical video, landscape, wide. The long edge is always a crisp 2000&nbsp;px.</p></div>
+    <div class="fcard"><div class="ficon">🔒</div><h3>100% on-device</h3>
+      <p>Photos never leave your Mac. No uploads, no account, no tracking — and it works completely offline.</p></div>
+    <div class="fcard"><div class="ficon">✦</div><h3>Studio finish</h3>
+      <p>Soft professional drop shadow plus auto-enhance: sharper detail, brighter lighting, richer colour.</p></div>
+    <div class="fcard"><div class="ficon">∞</div><h3>Buy once, own forever</h3>
+      <p>No subscription. No credits. No caps. No watermarks. One purchase, unlimited photos, forever.</p></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="kicker">Three steps</div>
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><div class="stepnum">1</div><h3>Drag in a folder</h3>
+      <p>Phone snaps straight from your iPhone — HEIC, JPG, PNG, WebP, TIFF.</p></div>
+    <div class="step"><div class="stepnum">2</div><h3>Pick backdrop &amp; shape</h3>
+      <p>One click for white square marketplace photos, or go custom.</p></div>
+    <div class="step"><div class="stepnum">3</div><h3>Process</h3>
+      <p>Listing-ready images land in your chosen folder. Originals untouched.</p></div>
+  </div>
+</div></section>
+
+<!-- Screenshot slots: upload shot-1.png / shot-2.png / shot-3.png to the repo
+     and they appear here automatically; until then they stay hidden. -->
+<section><div class="wrap">
+  <div class="shots">
+    <img src="shot-1.png" alt="StudioDrop screenshot" onerror="this.style.display='none'">
+    <img src="shot-2.png" alt="StudioDrop screenshot" onerror="this.style.display='none'">
+    <img src="shot-3.png" alt="StudioDrop screenshot" onerror="this.style.display='none'">
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="story">
+    <div class="kicker" style="text-align:left">Why StudioDrop exists</div>
+    <p><strong>Built by a reseller who got tired of subscriptions.</strong> Monthly fees,
+    upload caps, credit packs that run out mid-listing-day — product photography tools
+    treat volume sellers as a revenue stream to squeeze.</p>
+    <p>StudioDrop is the opposite: a one-time purchase that runs entirely on your own
+    Mac using Apple's built-in machine learning. It's the tool I wanted for my own
+    listings — fast enough for five hundred photos, private enough that nothing ever
+    leaves my machine, and paid for exactly once.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Questions</div>
+  <h2>FAQ</h2>
+  <div class="faq">
+    <details><summary>Do my photos get uploaded anywhere?</summary>
+      <p>No. All processing happens on your Mac using Apple's Vision framework.
+      The app makes no network connections at all — it works fully offline.</p></details>
+    <details><summary>Is it really a one-time purchase?</summary>
+      <p>Yes. Buy it once on the Mac App Store and it's yours — unlimited photos,
+      no credits, no renewal, and free updates.</p></details>
+    <details><summary>What if a cutout isn't perfect?</summary>
+      <p>Results depend on the source photo. The app includes a built-in tips guide;
+      the big three are even lighting, an uncluttered backdrop, and strong contrast
+      between your item and the background.</p></details>
+    <details><summary>What does it need to run?</summary>
+      <p>macOS 12 or later on an Apple Silicon Mac (M1 and newer).</p></details>
+  </div>
+</div></section>
+
+<footer>
+  <div><a href="support.html">Support</a>·<a href="privacy.html">Privacy Policy</a></div>
+  <div style="margin-top:12px">© 2026 StudioDrop</div>
+</footer>
+
 </body>
 </html>
