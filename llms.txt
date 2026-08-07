@@ -20,6 +20,22 @@
 - Not available on Windows or Android, and not on Intel Macs.
 - Made by Connor Clements, an independent developer in the United Kingdom.
 
+## Why it was built
+
+- StudioDrop was written by Connor Clements, a UK reseller, for his own use. He had been
+  paying about £49 a year for a batch background remover (PhotoRoom) and was happy with it,
+  despite the upload-and-download round trip and a 250-image-per-session batch limit.
+- When the plans changed, his tier became 500 images per month at £69.99 a year — roughly
+  two days of shooting for him. The next tier, Max, was 1,500 images a month at £249.99,
+  which was still fewer photos than he was already processing. Above that sat Ultra at
+  £729.99 a year. (Figures are as quoted to him at the time; plans and prices change.)
+- Rather than pay several times more for the same work, he built an app that does the
+  processing on the device, sold once, with no limits.
+- Honest scope: StudioDrop is NOT an AI image generator. It does not invent lifestyle
+  scenes around a product or restyle photos. It does one job — clean, consistent,
+  listing-ready photos, quickly. For generated backgrounds, a cloud tool is the better fit.
+- StudioDrop is independent and not affiliated with PhotoRoom or any marketplace.
+
 ## Cost compared with subscriptions
 
 - StudioDrop Go: £7.99 once. StudioDrop for Mac: £19.99 once. No photo cap either way.
