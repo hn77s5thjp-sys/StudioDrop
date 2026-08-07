@@ -1,75 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support — StudioDrop</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #1e1e20; color: rgba(255,255,255,0.88);
-    font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
-    line-height: 1.65; padding: 40px 20px 80px; }
-  .wrap { max-width: 640px; margin: 0 auto; }
-  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
-  .brand-dot { width: 34px; height: 34px; border-radius: 9px;
-    background: linear-gradient(135deg, #7fb5b0, #1c2740); }
-  .brand-name { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
-  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
-  .updated { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 30px; }
-  h2 { font-size: 16px; font-weight: 600; margin: 28px 0 8px; color: #8fb8f6; }
-  p, li { font-size: 15px; color: rgba(255,255,255,0.72); margin-bottom: 12px; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 8px; }
-  a { color: #8fb8f6; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .card { background: #2a2a2e; border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px; padding: 18px 20px; margin: 20px 0; }
-  .footer { margin-top: 48px; font-size: 12px; color: rgba(255,255,255,0.3); }
-  .footer a { color: rgba(255,255,255,0.45); }
-</style>
+<title>Support — StudioDrop &amp; StudioDrop Go</title>
+<meta name="description" content="Help with StudioDrop and StudioDrop Go: cutout quality, batch processing, where files are saved, refunds, and how to reach a human.">
+<link rel="canonical" href="https://getstudiodrop.com/support.html">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <div class="brand"><div class="brand-dot"></div><span class="brand-name">StudioDrop</span></div>
-  <h1>Support</h1>
-  <div class="updated">We usually reply within one working day</div>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="card">
-    <p style="margin:0"><strong>Need help?</strong> Email
-    <a href="mailto:connorclements@hotmail.com">connorclements@hotmail.com</a> — a real person
-    (the developer) replies.</p>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="brand-mark"></span>StudioDrop</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/">Overview</a>
+      <a href="/mac.html">Mac</a>
+      <a href="/support.html" aria-current="page">Support</a>
+    </nav>
   </div>
+</header>
 
-  <h2>How do I use StudioDrop?</h2>
-  <p>Drag a folder of product photos into the window (or click browse), choose
-  where to save, pick a background and shape, and click <strong>Process</strong>.
-  Finished photos appear in your chosen folder; your originals are never touched.</p>
+<main id="main" class="prose">
+<div class="wrap-narrow">
 
-  <h2>Some cutouts aren't perfect — why?</h2>
-  <p>Results depend on the source photo. Click the <strong>?</strong> button in
-  the app's title bar for the full photo-tips guide. The three biggest wins:
-  soft even lighting, a clean uncluttered backdrop, and strong contrast between
-  your item and the background.</p>
+  <p class="eyebrow">Support</p>
+  <h1 style="font-size:clamp(2rem,5vw,3rem)">Something not working?</h1>
+  <p class="lede">
+    StudioDrop is made by one person in the UK, and that person answers the email.
+    Write to <a href="mailto:connorclements@hotmail.com">connorclements@hotmail.com</a>
+    and you'll usually hear back within two working days.
+  </p>
+  <p>
+    For a problem report, include your device and OS version, which app and version,
+    and — most useful of all — <strong>an example photo that came out wrong</strong>.
+    A sample image tells me more than a paragraph ever can.
+  </p>
 
-  <h2>Where do my photos go?</h2>
-  <p>Nowhere. Everything is processed on your Mac. The app never connects to the
-  internet — it works fully offline.</p>
+  <hr class="divider" style="margin:44px 0">
 
-  <h2>What formats are supported?</h2>
-  <p>In: HEIC (straight from iPhone), JPG, PNG, WebP, TIFF and BMP.
-  Out: JPG for solid-colour backgrounds, PNG when you choose a transparent
-  background.</p>
+  <h2>Cutout quality</h2>
 
-  <h2>What do the aspect ratio options mean?</h2>
-  <p>1:1 is the square standard most marketplaces recommend. The portrait, tall,
-  vertical and wide options match social feeds, pin boards, stories and web
-  banners. The longest edge is always 2000 pixels, so quality never drops.</p>
+  <h3>The edges are ragged or part of the item is missing</h3>
+  <p>
+    Nine times out of ten this is the source photo rather than the app, and the cause is
+    almost always <strong>not enough contrast between the item and the background</strong>.
+    Background removal works by finding an edge; if the item and the backdrop are a
+    similar tone, there is no edge to find.
+  </p>
+  <ul>
+    <li>Dark items → shoot on a light backdrop</li>
+    <li>Pale or white items → shoot on mid-grey or something darker</li>
+    <li>Check the photo is sharp — tap the item on screen to focus before shooting</li>
+    <li>Turn the flash off and use soft daylight from a window</li>
+  </ul>
+  <p>The full guide is at <a href="/photo-guide.html">getstudiodrop.com/photo-guide</a>, and it's also built into both apps behind the "?" button.</p>
 
-  <h2>Refunds</h2>
-  <p>Purchases are handled by Apple. You can request a refund at
-  <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  <h3>It cut out my hand / the stand / the price tag</h3>
+  <p>
+    Anything touching or overlapping the item is treated as part of it. Shoot the item on
+    its own, centred, with a little space around all four edges.
+  </p>
 
-  <div class="footer"><a href="privacy.html">Privacy Policy</a> · © 2026 StudioDrop</div>
+  <h3>Hair, fur, mesh, chain or clear glass looks wrong</h3>
+  <p>
+    These are genuinely hard for every automatic tool, cloud or on-device. Maximum
+    contrast is the only real lever — shoot glass and fine chain against a strongly
+    contrasting flat surface. If you have an example that came out badly, please send it;
+    difficult samples are how the engine improves.
+  </p>
+
+  <hr class="divider" style="margin:44px 0">
+
+  <h2>StudioDrop Go (iPhone &amp; iPad)</h2>
+
+  <h3>Where did my finished photos go?</h3>
+  <p>
+    Into a dedicated <strong>StudioDrop</strong> album in Photos. Open Photos → Albums and
+    scroll to My Albums. Your originals are untouched and still in their original place.
+  </p>
+
+  <h3>It can't see my photos</h3>
+  <p>
+    Go to Settings → StudioDrop Go → Photos and make sure access is set to
+    <strong>All Photos</strong> (or at least Selected Photos, though that's fiddlier for
+    batches). iOS sometimes defaults to Limited Access on first launch.
+  </p>
+
+  <h3>A big batch is slow or seems to stall</h3>
+  <p>
+    Keep the app in the foreground while a batch runs and don't let the screen lock — iOS
+    suspends background work aggressively, especially in Low Power Mode. Turn Low Power
+    Mode off for a long session.
+  </p>
+
+  <hr class="divider" style="margin:44px 0">
+
+  <h2>StudioDrop (Mac)</h2>
+
+  <h3>It won't install / says it's not compatible</h3>
+  <p>
+    The Mac app requires <strong>macOS 14 or later on a Mac with an Apple M1 chip or
+    later</strong>. It does not run on Intel Macs — the on-device engine depends on Apple
+    Silicon. Check  → About This Mac.
+  </p>
+
+  <h3>Where do the processed files go?</h3>
+  <p>
+    To the output location you choose, with smart filenames so duplicates never overwrite
+    each other. Your original files are never modified, moved or deleted.
+  </p>
+
+  <h3>A folder didn't fully process</h3>
+  <p>
+    Check for unsupported files mixed in — the app reads HEIC, JPG, PNG, WebP and TIFF.
+    RAW files, videos and PDFs are skipped. Also check the destination has enough free
+    disk space for a large batch.
+  </p>
+
+  <h3>Can I use my own background image?</h3>
+  <p>Yes, on Mac. Drop an image in as the backdrop and it applies to the whole batch — useful for a consistent branded catalogue.</p>
+
+  <hr class="divider" style="margin:44px 0">
+
+  <h2>Purchases and refunds</h2>
+
+  <h3>I bought Go — do I get the Mac app too?</h3>
+  <p>
+    No, they're separate apps and separate purchases. Apple treats iOS and Mac apps as
+    distinct products unless a developer ships them as a Universal purchase, and these
+    aren't. Each works completely on its own.
+  </p>
+
+  <h3>I bought it and it's not on my other device</h3>
+  <p>
+    Sign into the same Apple&nbsp;Account, open the App&nbsp;Store, tap your photo, tap
+    Purchased and install from there. There's no in-app restore button because there's
+    nothing to restore — the app itself is the purchase.
+  </p>
+
+  <h3>I'd like a refund</h3>
+  <p>
+    Refunds are handled entirely by Apple, not by me — I can't issue one even when I'd
+    like to. Go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>,
+    sign in, and select the purchase. If it's because something didn't work, please email
+    me as well so I can fix it.
+  </p>
+
+  <h3>Family Sharing</h3>
+  <p>Both apps support it, so up to six family members can install from your one purchase.</p>
+
+  <hr class="divider" style="margin:44px 0">
+
+  <h2>Feature requests</h2>
+  <p>
+    Very welcome, same address. Tell me what you sell and how you list — StudioDrop got
+    most of its aspect ratios and backdrop colours because sellers wrote in and explained
+    what their platform wanted.
+  </p>
+
+  <p style="margin-top:34px">
+    <a class="btn btn-accent" href="mailto:connorclements@hotmail.com?subject=StudioDrop%20support">Email support</a>
+  </p>
+
+  <p class="updated" style="margin-top:40px">Last updated: 7 August 2026</p>
+
 </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="border:0;padding-top:0">
+      © 2026 Connor Clements ·
+      <a href="/">StudioDrop</a> ·
+      <a href="/mac.html">Mac</a> ·
+      <a href="/photo-guide.html">Photo guide</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/press.html">Press</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
