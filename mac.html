@@ -34,6 +34,62 @@
   "offers": { "@type": "Offer", "price": "19.99", "priceCurrency": "GBP", "category": "One-time purchase" }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will it run on my Intel Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It needs macOS 14 or later on a Mac with an Apple M1 chip or later. The whole speed and privacy story depends on Apple Silicon's neural engine, and it wouldn't be honest to ship something slow on Intel and call it the same product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does 500 photos actually take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your Mac and your image sizes, but the engine loads once and stays warm, so a large batch runs far faster per-photo than a small one. There's no upload wait at any point, which is where cloud tools lose most of their time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my own background image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this is a Mac-only feature. Drop in an image and it becomes the backdrop, which is how you get a consistent branded look across a whole catalogue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it touch my original files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never. Originals are read and left exactly as they were. Output goes to a separate location with smart filenames so nothing overwrites anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my Go purchase valid on Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — they're two separate apps and two separate purchases. Apple treats iOS and Mac apps as distinct products unless a developer bundles them as Universal, and these aren't. Each works completely on its own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an internet connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only to download the app from the Mac App Store. After that, never. It makes no network connections and works fully offline."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,6 +100,7 @@
     <nav class="nav" aria-label="Main">
       <a href="/">Overview</a>
       <a href="/photo-guide.html" class="hide-sm">Photo guide</a>
+      <a href="/marketplace-image-sizes.html" class="hide-sm">Image sizes</a>
       <a href="/mac.html" aria-current="page">Mac</a>
       <a class="btn btn-accent btn-sm" href="https://apps.apple.com/gb/app/studiodrop/id6787174883">Buy £19.99</a>
     </nav>
@@ -58,6 +115,13 @@
     <div>
       <p class="eyebrow">Mac · macOS 14+ · Apple Silicon</p>
       <h1>Drag in a folder. <em>Get a catalogue back.</em></h1>
+      <div class="tldr">
+        <p><strong>In short.</strong> StudioDrop for Mac batch-removes backgrounds from
+        product photos. Drag a folder from Finder, pick a backdrop and shape, click Process,
+        and get back clean listing images — 500+ in one go, at a 2000&nbsp;pixel long edge.
+        All processing happens on your own Mac using Apple Silicon; nothing is uploaded.
+        £19.99, one-time, no subscription. Requires macOS&nbsp;14+ on an M1 Mac or later.</p>
+      </div>
       <p class="lede">
         One, ten, or five hundred phone snaps in. Clean, bright, shadow-lit,
         listing-ready product photos out. Processed entirely on your own Mac —

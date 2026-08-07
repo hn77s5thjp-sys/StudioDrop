@@ -41,6 +41,109 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do my photos get uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All processing happens on your device using Apple's Vision framework. The apps make no network connections at all — they work fully offline, and you can verify that with any network monitoring tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it really a one-time purchase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Buy it once and it's yours — unlimited photos, no credits, no renewal, free updates. There's no account and nothing to cancel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between StudioDrop and StudioDrop Go?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same product, different devices. StudioDrop Go (£7.99) is the iPhone and iPad app — pick photos from your library and process them anywhere. StudioDrop (£19.99) is the Mac app — drag in whole folders for bulk sessions, with a few desktop extras like custom image backdrops. Both use the same on-device engine and produce identical results. They're separate purchases and each works completely on its own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the Mac app more expensive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's aimed at higher-volume work — batching hundreds of files from Finder in a sitting, a warm engine between batches, custom image backdrops, and every input format. If you list a handful of items at a time from your phone, Go is the one you want and it's the cheaper answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a cutout isn't perfect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Results depend on the source photo. The big three are even lighting, an uncluttered backdrop, and good tonal contrast between the item and what's behind it — see the photo guide . Fine hair, wire, mesh and clear glass are hard for any tool, cloud or local. If you hit something the app handles badly, email me a sample; that's how it gets better."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any credits or usage limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None. It isn't a cloud service, so there's nothing to meter. Process as many photos as you like, forever, for the one purchase price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What aspect ratio should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most reselling platforms prefer square 1:1, which is the default. Portrait 4:5 suits Instagram feed, 2:3 suits pin boards, 9:16 suits stories and short video, and 16:9 suits banners. The long edge is always 2000 pixels, so quality never drops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the apps require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone and iPad: iOS or iPadOS 17 or later. Mac: macOS 14 or later on a Mac with an Apple M1 chip or later. Intel Macs aren't supported, because the on-device engine relies on Apple Silicon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the images commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They're your photos of your items — StudioDrop just processes them. There's no watermark, no licence restriction, and no claim on anything you produce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on Windows or Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The whole approach depends on Apple's on-device machine learning, which is what makes it fast, private and free of running costs. There's no plan for other platforms."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudioDrop",
+  "url": "https://getstudiodrop.com/",
+  "inLanguage": "en-GB",
+  "publisher": {
+    "@type": "Person",
+    "name": "Connor Clements",
+    "url": "https://pocketstrum.com/",
+    "email": "connorclements@hotmail.com"
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,6 +154,7 @@
     <nav class="nav" aria-label="Main">
       <a href="#features" class="hide-sm">Features</a>
       <a href="/photo-guide.html" class="hide-sm">Photo guide</a>
+      <a href="/marketplace-image-sizes.html" class="hide-sm">Image sizes</a>
       <a href="#apps">Apps</a>
       <a class="btn btn-accent btn-sm" href="#apps">Buy</a>
     </nav>
@@ -65,6 +169,13 @@
     <div>
       <p class="eyebrow">iPhone · iPad · Mac</p>
       <h1>Studio product photos. <em>On your own device.</em></h1>
+      <div class="tldr">
+        <p><strong>In short.</strong> StudioDrop removes the background from product photos
+        and drops the item onto white, transparent or any colour with a soft studio shadow —
+        running entirely on your own iPhone, iPad or Mac. Nothing is uploaded, there are no
+        credits or subscription, and it works offline. £7.99 on iPhone and iPad, £19.99 on
+        Mac, both one-time purchases. Exports at a 2000&nbsp;pixel long edge in seven shapes.</p>
+      </div>
       <p class="lede">
         Background removal for people who sell things online — running entirely on the
         iPhone, iPad or Mac you already own. No cloud service. No AI credits.
@@ -153,6 +264,49 @@
         <figcaption>The same thing, entirely on an iPhone.</figcaption>
       </figure>
     </div>
+
+    <!-- ▼ MORE BEFORE/AFTERS
+         Drop files named ba-1.jpg … ba-6.jpg into shots/ and they appear here
+         automatically. Any that don't exist stay hidden — no broken images.
+         Edit the captions below to match what you shot. -->
+    <div class="ba-gallery" id="ba-gallery">
+      <figure class="proof" hidden>
+        <img src="shots/ba-1.jpg" loading="lazy" alt="A product photographed at home, and the same photo after StudioDrop">
+        <figcaption>Shot at home &rarr; listing ready</figcaption>
+      </figure>
+      <figure class="proof" hidden>
+        <img src="shots/ba-2.jpg" loading="lazy" alt="A second product before and after background removal">
+        <figcaption>Shot at home &rarr; listing ready</figcaption>
+      </figure>
+      <figure class="proof" hidden>
+        <img src="shots/ba-3.jpg" loading="lazy" alt="A third product before and after background removal">
+        <figcaption>Shot at home &rarr; listing ready</figcaption>
+      </figure>
+      <figure class="proof" hidden>
+        <img src="shots/ba-4.jpg" loading="lazy" alt="A fourth product before and after background removal">
+        <figcaption>Shot at home &rarr; listing ready</figcaption>
+      </figure>
+      <figure class="proof" hidden>
+        <img src="shots/ba-5.jpg" loading="lazy" alt="A fifth product before and after background removal">
+        <figcaption>Shot at home &rarr; listing ready</figcaption>
+      </figure>
+      <figure class="proof" hidden>
+        <img src="shots/ba-6.jpg" loading="lazy" alt="A sixth product before and after background removal">
+        <figcaption>Shot at home &rarr; listing ready</figcaption>
+      </figure>
+    </div>
+    <script>
+    /* Reveal only the before/after images that actually exist. */
+    (function(){
+      var g=document.getElementById('ba-gallery'); if(!g) return;
+      Array.prototype.forEach.call(g.querySelectorAll('figure'), function(fig){
+        var img=fig.querySelector('img'), probe=new Image();
+        probe.onload  = function(){ fig.hidden=false; g.classList.add('has-items'); };
+        probe.onerror = function(){ fig.remove(); };
+        probe.src=img.getAttribute('src');
+      });
+    })();
+    </script>
   </div>
 </section>
 
@@ -362,32 +516,66 @@
   </div>
 </section>
 
-<!-- ============================ WHO ============================ -->
-<section>
+<!-- ============================ WHO / WHERE ============================ -->
+<section id="where">
   <div class="wrap">
-    <div class="center" style="max-width:620px;margin:0 auto 34px">
-      <p class="eyebrow">Who uses it</p>
-      <h2>Anyone who photographs stock in volume</h2>
+    <div class="center" style="max-width:680px;margin:0 auto 40px">
+      <p class="eyebrow">Where people use it</p>
+      <h2>If you photograph stock, this is for you</h2>
+      <p class="lede">
+        Built for eBay listing days, but the output is just clean product photos —
+        which is what every selling platform wants.
+      </p>
     </div>
-    <ul class="pills" style="justify-content:center;max-width:900px;margin:0 auto">
-      <li>Marketplace resellers &amp; flippers</li>
-      <li>Car boot &amp; market traders</li>
-      <li>House clearance &amp; estate sales</li>
-      <li>Auction houses</li>
-      <li>Charity shops</li>
-      <li>Trading card sellers</li>
-      <li>Coin &amp; collectibles dealers</li>
-      <li>Vintage &amp; antiques</li>
-      <li>Jewellery &amp; watches</li>
-      <li>Handmade &amp; craft shops</li>
-      <li>Consignment stores</li>
-      <li>Print-on-demand sellers</li>
-      <li>Small brands building a catalogue</li>
-      <li>Social sellers making vertical posts</li>
-      <li>Virtual assistants offering listing services</li>
-      <li>Collectors cataloguing</li>
-      <li>Home inventories for insurance</li>
-    </ul>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Marketplaces</h3>
+        <p>eBay, Amazon, Etsy, Vinted, Depop, Poshmark, Mercari, Facebook Marketplace,
+        Gumtree, Vestiaire, Whatnot. One square export covers most of them —
+        <a href="/marketplace-image-sizes.html">here's the size table</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Your own shop</h3>
+        <p>Shopify, Etsy, WooCommerce, Squarespace, Wix, Big Cartel. A consistent white
+        backdrop across a catalogue is the difference between "shop" and "someone's spare room".</p>
+      </div>
+      <div class="card">
+        <h3>Trade &amp; volume</h3>
+        <p>House clearance, estate sales, auction houses, charity shops, consignment,
+        car boot and market traders — anyone photographing hundreds of lots a week.</p>
+      </div>
+      <div class="card">
+        <h3>Collectables</h3>
+        <p>Trading cards, coins, stamps, comics, vinyl, watches, jewellery, antiques.
+        Cataloguing a collection is the same job as listing it.</p>
+      </div>
+      <div class="card">
+        <h3>Makers &amp; small brands</h3>
+        <p>Handmade and craft sellers, print-on-demand, dropshippers, and anyone building
+        a lookbook who needs every product shot to match.</p>
+      </div>
+      <div class="card">
+        <h3>Social selling</h3>
+        <p>Instagram and TikTok shops, Pinterest, WhatsApp and Facebook groups.
+        Export 4:5 or 9:16 and the item fills the screen instead of floating in a square.</p>
+      </div>
+      <div class="card">
+        <h3>Services</h3>
+        <p>Virtual assistants and listing services working through a client's backlog,
+        photographers offering ecommerce packages, and agencies handling catalogue refreshes.</p>
+      </div>
+      <div class="card">
+        <h3>Not selling at all</h3>
+        <p>Home inventories for insurance, probate and valuation records, school and club
+        equipment logs, and museum or archive cataloguing.</p>
+      </div>
+      <div class="card">
+        <h3>Anything with a backdrop problem</h3>
+        <p>If the photo is fine but the kitchen behind it isn't, that's the whole job.
+        No studio, no lightbox, no retouching.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -544,26 +732,6 @@
   </div>
 </section>
 
-<!-- ============================ SIGNUP ============================ -->
-<section class="section-tight">
-  <div class="wrap-narrow">
-    <div class="signup">
-      <h3 style="margin-bottom:.35em">Selling tips and update notes</h3>
-      <p style="margin-bottom:0;color:var(--ink-soft)">
-        Occasional emails about listing photography, new features, and the odd launch
-        discount. A few a year, never more.
-      </p>
-      <!-- ▼ REPLACE the action URL with your own (see DEPLOY.md, step 6) -->
-      <form class="signup-form" action="https://buttondown.com/api/emails/embed-subscribe/YOUR-USERNAME" method="post" target="_blank">
-        <label class="visually-hidden" for="sd-email">Email address</label>
-        <input id="sd-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
-        <button class="btn btn-accent" type="submit">Keep me posted</button>
-      </form>
-      <small>No spam, one click unsubscribes, and your address is never sold or shared.</small>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="site-footer">
@@ -587,6 +755,7 @@
         <h4>Guides</h4>
         <ul>
           <li><a href="/photo-guide.html">Product photo guide</a></li>
+          <li><a href="/marketplace-image-sizes.html">Image sizes by marketplace</a></li>
           <li><a href="/background-remover-no-subscription.html">Background removers without a subscription</a></li>
         </ul>
       </div>

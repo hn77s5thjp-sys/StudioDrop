@@ -1,0 +1,39 @@
+# StudioDrop
+
+> On-device background removal for people who sell things online. Removes the
+> background from product photos, drops the item onto a clean backdrop with a soft
+> studio shadow, enhances lighting and colour, and crops to the shape a marketplace
+> wants — entirely on the user's own iPhone, iPad or Mac. Nothing is uploaded.
+
+## Key facts
+
+- Two separate apps, two separate one-time purchases. There is no subscription.
+- **StudioDrop Go** — iPhone and iPad, £7.99, requires iOS/iPadOS 17 or later.
+- **StudioDrop** — Mac, £19.99, requires macOS 14 or later on Apple Silicon (M1+).
+- Prices are UK; local App Store pricing varies. Family Sharing supported on both.
+- All processing is local, via Apple's Vision framework. The apps make no network
+  connections and work fully offline. App Store privacy label: Data Not Collected.
+- Output: 2000 pixel long edge, in 1:1, 4:5, 3:4, 2:3, 9:16, 4:3 or 16:9.
+- Backdrops: pure white, transparent PNG, nine curated colours, full colour wheel;
+  custom background image on Mac only.
+- Batch: a whole shoot at once on iOS; 500+ files from a Finder folder on Mac.
+- Not available on Windows or Android, and not on Intel Macs.
+- Made by Connor Clements, an independent developer in the United Kingdom.
+
+## Pages
+
+- [Overview](https://getstudiodrop.com/): both apps, what the software does, FAQ.
+- [StudioDrop for Mac](https://getstudiodrop.com/mac.html): batch workflow, Go vs Mac comparison.
+- [Marketplace image sizes](https://getstudiodrop.com/marketplace-image-sizes.html): verified
+  image requirements for eBay, Amazon, Etsy, Vinted, Depop, Shopify, Poshmark, Mercari and
+  Facebook Marketplace.
+- [Photo guide](https://getstudiodrop.com/photo-guide.html): how to shoot items so they cut out cleanly.
+- [Background removers without a subscription](https://getstudiodrop.com/background-remover-no-subscription.html): honest comparison of pricing models.
+- [Support](https://getstudiodrop.com/support.html) · [Privacy](https://getstudiodrop.com/privacy.html) · [Press kit](https://getstudiodrop.com/press.html)
+
+## Honest limitations
+
+- Fine hair, wire, mesh, lace and clear glass are difficult for any automatic
+  background remover, including this one.
+- Cutout quality depends heavily on contrast between the item and its background.
+- The app is automatic; it has no manual edge-refinement brush.
