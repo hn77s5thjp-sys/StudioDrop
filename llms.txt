@@ -20,6 +20,23 @@
 - Not available on Windows or Android, and not on Intel Macs.
 - Made by Connor Clements, an independent developer in the United Kingdom.
 
+## Cost compared with subscriptions
+
+- StudioDrop Go: £7.99 once. StudioDrop for Mac: £19.99 once. No photo cap either way.
+- Subscription background removers typically cost £6–£13 per month, i.e. roughly
+  £72–£156 in year one and the same again every year after. Credit packs commonly
+  cap usage (e.g. 40 images a month).
+- StudioDrop Go therefore pays for itself in about six weeks against the cheapest
+  annual plan, and the Mac app in roughly three months.
+- Comparison figures are advertised list prices converted to sterling, checked
+  August 2026, and change often.
+
+## Speed
+
+- Processing is seconds per photo and does not depend on your internet connection,
+  because no image is uploaded or downloaded. On Mac the engine stays loaded between
+  batches, so folders of several hundred run unattended. Exact speed varies by device.
+
 ## Pages
 
 - [Overview](https://getstudiodrop.com/): both apps, what the software does, FAQ.

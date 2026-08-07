@@ -64,38 +64,13 @@
     shapes.appendChild(el);
   });
 
-  /* ---- the "product" — a cut-out item with a soft studio shadow ---------- */
-  stage.insertAdjacentHTML('beforeend', [
-    '<svg viewBox="0 0 260 260" role="img" aria-label="A cut-out product photo sitting on the chosen backdrop with a soft studio shadow">',
-      '<defs>',
-        '<radialGradient id="sd-shadow" cx="50%" cy="50%" r="50%">',
-          '<stop offset="0%"  stop-color="#000" stop-opacity=".26"/>',
-          '<stop offset="65%" stop-color="#000" stop-opacity=".08"/>',
-          '<stop offset="100%" stop-color="#000" stop-opacity="0"/>',
-        '</radialGradient>',
-        '<linearGradient id="sd-body" x1="0" y1="0" x2="1" y2="1">',
-          '<stop offset="0%"  stop-color="#e86b4a"/>',
-          '<stop offset="52%" stop-color="#d1502f"/>',
-          '<stop offset="100%" stop-color="#a83a20"/>',
-        '</linearGradient>',
-        '<linearGradient id="sd-gloss" x1="0" y1="0" x2="1" y2="0">',
-          '<stop offset="0%"   stop-color="#fff" stop-opacity=".42"/>',
-          '<stop offset="38%"  stop-color="#fff" stop-opacity=".05"/>',
-          '<stop offset="100%" stop-color="#fff" stop-opacity="0"/>',
-        '</linearGradient>',
-      '</defs>',
-
-      /* studio shadow */
-      '<ellipse cx="130" cy="216" rx="66" ry="15" fill="url(#sd-shadow)"/>',
-
-      /* a vase-ish product silhouette — recognisable, neutral, sells the idea */
-      '<path d="M112 40 h36 a6 6 0 0 1 6 6 v18 c0 10 26 26 26 60 v52 a36 36 0 0 1-36 36 h-28 a36 36 0 0 1-36-36 v-52 c0-34 26-50 26-60 v-18 a6 6 0 0 1 6-6 z"',
-            ' fill="url(#sd-body)"/>',
-      '<path d="M112 40 h36 a6 6 0 0 1 6 6 v18 c0 10 26 26 26 60 v52 a36 36 0 0 1-36 36 h-28 a36 36 0 0 1-36-36 v-52 c0-34 26-50 26-60 v-18 a6 6 0 0 1 6-6 z"',
-            ' fill="url(#sd-gloss)"/>',
-      '<rect x="106" y="62" width="48" height="7" rx="3.5" fill="#8d2f18" opacity=".55"/>',
-    '</svg>'
-  ].join(''));
+  /* ---- the product — a real cut-out, exported from StudioDrop ------------ */
+  stage.insertAdjacentHTML('beforeend',
+    '<div class="pg-item">' +
+      '<span class="pg-shadow" aria-hidden="true"></span>' +
+      '<img src="shots/hero-cutout.png" width="560" height="560" fetchpriority="high" decoding="async" ' +
+           'alt="A Casio G-Shock watch cut out of its background by StudioDrop, sitting on the chosen backdrop with a soft studio shadow">' +
+    '</div>');
 
   /* ---- state ------------------------------------------------------------- */
   var current = { bg: BACKDROPS[0], shape: SHAPES[0] };
