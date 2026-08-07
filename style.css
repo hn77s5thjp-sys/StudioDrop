@@ -386,3 +386,14 @@ td:first-child { font-weight: 600; }
 .ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 @media (max-width: 780px) { .ba-grid { grid-template-columns: 1fr; } }
 .ba-grid figcaption { font-size: .86rem; }
+
+/* --- flexibility demo: same item, two treatments --------------------------- */
+.flex-demo {
+  display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 28px; align-items: start; justify-items: center;
+  max-width: 780px; margin: 0 auto;
+}
+.flex-demo figure { margin: 0; width: 100%; }
+.flex-demo img { border-radius: 14px; }
+.flex-demo figcaption { font-size: .88rem; line-height: 1.45; }
+@media (max-width: 620px) { .flex-demo { grid-template-columns: 1fr; gap: 24px; } }
