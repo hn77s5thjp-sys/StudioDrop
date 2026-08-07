@@ -68,7 +68,7 @@
   stage.insertAdjacentHTML('beforeend',
     '<div class="pg-item">' +
       '<span class="pg-shadow" aria-hidden="true"></span>' +
-      '<img src="shots/hero-cutout.png" width="560" height="560" fetchpriority="high" decoding="async" ' +
+      '<img src="shots/hero-cutout.png?v=3" width="560" height="560" fetchpriority="high" decoding="async" ' +
            'alt="A Casio G-Shock watch cut out of its background by StudioDrop, sitting on the chosen backdrop with a soft studio shadow">' +
     '</div>');
 
