@@ -379,9 +379,10 @@ td:first-child { font-weight: 600; }
 .tldr p { margin: 0; }
 .tldr strong:first-child { letter-spacing: -.01em; }
 
-/* --- before/after gallery -------------------------------------------------
-   Slots for ba-1.jpg … ba-6.jpg. Empty slots remove themselves, so the
-   section simply doesn't appear until real images are uploaded. */
-.ba-gallery { display: grid; gap: 22px; margin-top: 26px; }
-.ba-gallery.has-items { grid-template-columns: repeat(2, 1fr); }
-@media (max-width: 720px) { .ba-gallery.has-items { grid-template-columns: 1fr; } }
+/* --- before / after gallery ------------------------------------------------ */
+.proof-hero { margin-bottom: 26px; }
+.proof-hero img { border-radius: 18px; }
+.proof-hero figcaption { font-size: .95rem; }
+.ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+@media (max-width: 780px) { .ba-grid { grid-template-columns: 1fr; } }
+.ba-grid figcaption { font-size: .86rem; }
