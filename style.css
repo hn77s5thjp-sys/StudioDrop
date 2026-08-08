@@ -312,6 +312,15 @@ section { padding: 76px 0; }
 .shot-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .shot-strip-4 { grid-template-columns: repeat(4, 1fr); }
 .shot-strip-2 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+/* --- embedded demo video (vertical, phone-shaped) ------------------------- */
+.video-wrap {
+  max-width: 330px; margin: 0 auto 14px; background: #000;
+  border-radius: 22px; overflow: hidden;
+  border: 1px solid var(--line); box-shadow: var(--shadow-lg);
+}
+.video-wrap video { display: block; width: 100%; height: auto; }
+@media (max-width: 420px) { .video-wrap { max-width: 100%; } }
 .strip-label {
   font-family: var(--mono); font-size: .68rem; letter-spacing: .14em;
   text-transform: uppercase; color: var(--ink-faint); margin: 0 0 14px; text-align: center;

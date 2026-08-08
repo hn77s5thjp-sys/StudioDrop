@@ -20,7 +20,7 @@
 
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="press/icon-studiodrop.png">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 
 <script type="application/ld+json">
 {
@@ -901,7 +901,16 @@
       what backdrop, what shape. Then it gets out of your way.</p>
     </div>
 
-    <p class="strip-label">On iPhone &amp; iPad — £7.99</p>
+    <div class="video-wrap">
+      <video poster="shots/go-demo-poster.jpg" width="720" height="1280"
+             autoplay muted loop playsinline controls preload="metadata"
+             aria-label="Screen recording of StudioDrop Go on iPhone: thirty-three photos selected from the library, processed in one tap, and saved back into a StudioDrop album">
+        <source src="shots/go-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="shot-caption">33 photos · one tap · saved straight back to your library — real time, no cuts</p>
+
+    <p class="strip-label" style="margin-top:46px">On iPhone &amp; iPad — £7.99</p>
     <div class="shot-strip shot-strip-4">
       <div class="shot-frame">
         <img src="shots/app-empty.jpg" width="760" height="1559" loading="lazy"
@@ -1095,6 +1104,16 @@
   </div>
 </footer>
 
+<script>
+/* Respect the OS "reduce motion" setting — don't loop the demo at people. */
+(function () {
+  if (!window.matchMedia) return;
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.video-wrap video').forEach(function (v) {
+    v.autoplay = false; v.loop = false; try { v.pause(); } catch (e) {}
+  });
+})();
+</script>
 <script src="demo-backdrop.js?v=3"></script>
 </body>
 </html>
